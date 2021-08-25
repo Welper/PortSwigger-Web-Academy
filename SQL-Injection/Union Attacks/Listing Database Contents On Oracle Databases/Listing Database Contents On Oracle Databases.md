@@ -1,5 +1,4 @@
-# Goal
-- Login as admin
+# Goal: Login as admin
 
 # Preliminary Work
 - Get the SQL Version
