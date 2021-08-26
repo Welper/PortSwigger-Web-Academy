@@ -34,7 +34,7 @@
 - Get the column data using string concatenation stuff
     - ' ' UNION SELECT NULL,username || '*' || password FROM users--
         - Need to select two columns AND 1st column cannot hold text
-        - * is a separator since characters would blend together otherwise
+        - '*' is a separator since characters would blend together otherwise
     - ![](./pics/225112.png)
 - Admin Info
     - uname: administrator
