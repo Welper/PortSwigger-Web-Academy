@@ -18,7 +18,7 @@ NOTE: syntax for time delay varies greatly among database versions, so reference
 # The Lab
 ## Goal: Cause a 10 second delay
 
-## Preliminary Work
+## Time Delay Exploitation
 - Given:
     - Using tracking cookie to differentiate users
     - This cookie is used in SQL Query that checks its value
@@ -29,11 +29,19 @@ NOTE: syntax for time delay varies greatly among database versions, so reference
     - ^ for Microsoft versions
     - Also tried unconditional version: '; WAITFOR DELAY '0:0:10'-- (:x:)
 - Trying other versions (unconditional)
-    - PostgreSQL: 
+    - PostgreSQL: fake'||pg_sleep(10)-- (:white_check_mark:)
+        - ![time delay success](./time-delay.png)
+            -  notice the turtle icon to show that it took a while
+        - Tried conditional syntax but unsuccessful
+        - '||' is string consatentation in PostgreSQL
+            - Tried putting it between each word in conditional payload to no avail (plus signs did not work either)
 
-SOLVED BUT COME BACK TO IT FOR UNDERSTANDINGS
-
-## Time Delay Exploitation
+- General strategy for future:
+    - Try conditional stuff from different SQL versions
+        - trying # for comment and || or + for whitespace elimination
+    - Try unconditional payloads for each SQL version
+        - same variations as above
+- Might try || for prior labs which I was unable to solve
 
 
 
