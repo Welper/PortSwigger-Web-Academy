@@ -66,28 +66,60 @@
             - Only 1 equal sign (not usual ==)
     - Password is 20 (will need to use a LOT of payloads since I am doing it manually)
 - Payload for letter equality: fake'%3BSELECT+CASE+WHEN+(username+=+'administrator'+AND+SUBSTRING(password,1,1)+>+'m')+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END+FROM+users--
-    - Having ASCII Chart is nice ![ASCII Chart](./ASCII-Chart.webp)
-    - Letter 1: C
-        - Greater than 'm'
-        - Greater than 'M'
-        - Greater than 'G'
-        - Greater than 'D'
-        - Either 'A','B','C'
-            - Not 'A'
-            - Not 'B'
-            - Not 'C'
-        - Thus, not a letter
-        - Try numbers next
-            - Greater than '5'
-            - Greater than '2'
-            - Not '1'
-        - Try other symbols before numbers and after whitespace characters
-            - Greater than ')'
-            - Greater than '$'
-            - Greater than '"'
-            - Not !
-        - IDK WHAT IS HAPPENING LOL
-            - At least some delays are happening though :)
+    - Having ASCII Chart is nice ![ASCII Chart](./ASCII_Chart.jpg)
+    - Letter 1: v
+        - Greater than 'm' (:white_check_mark:)
+            - Greater than 'M'
+            - Greater than 'G'
+            - Greater than 'D'
+            - Either 'A','B','C'
+                - Not 'A'
+                - Not 'B'
+                - Not 'C'
+            - Thus, not a letter
+            - Try numbers next
+                - Greater than '5'
+                - Greater than '2'
+                - Not '1'
+            - Try other symbols before numbers and after whitespace characters
+                - Greater than ')'
+                - Greater than '$'
+                - Greater than '"'
+                - Not !
+            - IDK WHAT IS HAPPENING LOL
+                - At least some delays are happening though :)
+            - I said "greater than 'm'" then did values less then 'm' LMAO
+        - Greater than or equal to 'v' (:white_check_mark:)
+        - Greater than 'v' (:x:)
+        - Equal to 'v' (:white_check_mark:)
+    - Letter 2: 
+        - Greater than 'm' (:x:)
+        - Greater than 'M' (:x:)
+        - Greater than 'K' (:x:)
+        - Greater than 'D' (:x:)
+        - Greater than 'A' (:x:)
+        - Greater than '0' (:white_check_mark:)
+            - The number Zero
+        - Greater than '9' (:white_check_mark:)
+            - Thus, not a number
+        - Equal to ':', '<', '>', '=', '?', '@' (:x:)
+            - Based on data, it should be ';', but I need escape character for it to not break the string lol
+            - Trying to use a roundabout way
+        - Tried URL encoding %3B but no work :(
+        - Greater than ':' (:white_check_mark:)
+        - Less than '<' (:x:)
+        - NVM lol, just doing greater that stuff again
+        - Greater than ':' (:white_check_mark:)
+        - Greater than '<' (:white_check_mark:)
+        - Greater than '=' (:white_check_mark:)
+        - Greater than '?' (:white_check_mark:)
+        - Equal to 'A' (:x:)
+        - Greater than '@' (:white_check_mark:)
+        - Greater than '@' and Less than 'A'
+
+        - IDK LMAO
+
+        
 
 
 # Observations
