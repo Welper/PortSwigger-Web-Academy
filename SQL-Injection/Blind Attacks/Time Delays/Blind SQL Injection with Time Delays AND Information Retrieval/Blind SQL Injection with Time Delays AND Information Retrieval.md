@@ -118,6 +118,26 @@
         - Greater than '@' and Less than 'A'
 
         - IDK LMAO
+        - trying again
+
+        - Greater than 'm' (:x:)
+        - Less than 'm' (:white_check_mark:)
+        - Less than 'M' (:white_check_mark:)
+        - Less than 'D' (:x:)
+        - Greater than 'D' (:white_check_mark:)
+        - Greater than 'I' (:white_check_mark:)
+        - Greater than 'K' (:white_check_mark:)
+        - Equal to 'L' (:x:)
+        - Greater than 'M' (:x:)
+        - Less than or Equal to 'L' (:white_check_mark:)
+        - Greater than or Equal to 'L' (:x:)
+        - Did the <= and >= stuff with 'I', 'J', 'K', 'M'
+        - For some reason, I thought of trying 'l' (lowercase L) AND IT WORKED (:white_check_mark:) (:white_check_mark:) (:white_check_mark:) (:white_check_mark:)
+        - Thus, I do not need to do the checks for uppercase or lowercase
+        - Once I deduce which letter it MUST be, use = to determine uppercase or lowercase
+            - Will test this method with next letter to ensure correctness
+
+        
 
         
 
