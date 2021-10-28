@@ -92,7 +92,7 @@
         - Greater than or equal to 'v' (:white_check_mark:)
         - Greater than 'v' (:x:)
         - Equal to 'v' (:white_check_mark:)
-    - Letter 2: 
+    - Letter 2: l (lowercase ele)
         - Greater than 'm' (:x:)
         - Greater than 'M' (:x:)
         - Greater than 'K' (:x:)
@@ -137,7 +137,26 @@
         - Once I deduce which letter it MUST be, use = to determine uppercase or lowercase
             - Will test this method with next letter to ensure correctness
 
-        
+        - TRY TO LOOK UP HOW CHAR INEQUALITIES WORK IN POSTGRESQL  
+    - Letter 3: j
+        - Greater than 'm' (:x:)
+        - Greater than 'a' (:white_check_mark:)
+        - Greater than 'd' (:white_check_mark:)
+        - Greater than 'j' (:x:)
+
+        - Thus, either e / f / g / h / i
+
+        - Greater than 'e' (:white_check_mark:)
+        - Greater than 'f' (:white_check_mark:)
+        - Greater than 'g' (:white_check_mark:)
+        - Greater than 'h' (:white_check_mark:)
+
+        - Thus, either 'i' or 'I'
+        - Equal to 'i' (:x:)
+        - Equal to 'I' (:x:)
+
+        - Forgot that 'j' is not greater than 'j' too
+        - Equal to 'j' (:white_check_mark:)
 
         
 
